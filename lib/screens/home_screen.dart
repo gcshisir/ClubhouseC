@@ -53,7 +53,10 @@ class HomeScreen extends StatelessWidget {
         ),
         body: Center(
             child: ListView(
-          children: [],
+          padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 120.0),
+          children: [
+            UpcomingRooms(upcomingRooms: upcomingRoomsList),
+          ],
         )));
   }
 }
