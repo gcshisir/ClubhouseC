@@ -33,22 +33,27 @@ class UpcomingRooms extends StatelessWidget {
                       SizedBox(
                         width: 12.0,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          if (e.club.isNotEmpty)
-                            Text(
-                              '${e.club}'.toUpperCase(),
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .overline!
-                                  .copyWith(
-                                    fontWeight: FontWeight.w600,
-                                    letterSpacing: 1.0,
-                                  ),
-                            ),
-                          Text('${e.name}')
-                        ],
+                      Expanded(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            if (e.club.isNotEmpty)
+                              Flexible(
+                                child: Text(
+                                  '${e.club}'.toUpperCase(),
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .overline!
+                                      .copyWith(
+                                        fontWeight: FontWeight.w600,
+                                        letterSpacing: 1.0,
+                                      ),
+                                ),
+                              ),
+                            Text('${e.name}')
+                          ],
+                        ),
                       )
                     ],
                   ),
