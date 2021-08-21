@@ -56,6 +56,10 @@ class HomeScreen extends StatelessWidget {
           padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 120.0),
           children: [
             UpcomingRooms(upcomingRooms: upcomingRoomsList),
+            const SizedBox(
+              height: 12.0,
+            ),
+            ...roomsList.map((e) => RoomCard(room: e))
           ],
         )));
   }
