@@ -49,9 +49,14 @@ class UpcomingRooms extends StatelessWidget {
                                         fontWeight: FontWeight.w600,
                                         letterSpacing: 1.0,
                                       ),
+                                  overflow: TextOverflow.ellipsis,
                                 ),
                               ),
-                            Text('${e.name}')
+                            Flexible(
+                                child: Text(
+                              '${e.name}',
+                              overflow: TextOverflow.ellipsis,
+                            ))
                           ],
                         ),
                       )
