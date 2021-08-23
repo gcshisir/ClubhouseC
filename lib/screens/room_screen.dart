@@ -1,3 +1,4 @@
+import '../widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../data.dart';
@@ -17,6 +18,22 @@ class RoomScreen extends StatelessWidget {
           icon: const Icon(CupertinoIcons.chevron_down),
           label: const Text('All rooms'),
         ),
+        actions: [
+          IconButton(
+            icon: Icon(CupertinoIcons.doc),
+            onPressed: () {},
+          ),
+          GestureDetector(
+            onTap: () {},
+            child: Padding(
+              padding: EdgeInsets.fromLTRB(8.0, 10.0, 20.0, 10.0),
+              child: UserProfileImage(
+                imageUrl: currentUser.imageUrl,
+                size: 36.0,
+              ),
+            ),
+          ),
+        ],
         leadingWidth: 120.0,
       ),
     );
