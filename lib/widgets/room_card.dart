@@ -36,7 +36,6 @@ class RoomCard extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         letterSpacing: 1.0,
                       ),
-                  overflow: TextOverflow.ellipsis,
                 ),
                 Text(
                   '${room.name}',
