@@ -77,7 +77,7 @@ class RoomCard extends StatelessWidget {
                         children: [
                           ...room.speakers.map(
                             (e) => Text(
-                              '${e.givenName} ${e.familyName}',
+                              '${e.givenName} ${e.familyName} 💬',
                               style: Theme.of(context)
                                   .textTheme
                                   .bodyText1!
