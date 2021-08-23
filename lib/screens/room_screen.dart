@@ -54,7 +54,7 @@ class RoomScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        '${room.club} '.toUpperCase(),
+                        '${room.club} 🏠 '.toUpperCase(),
                         style: Theme.of(context).textTheme.overline!.copyWith(
                               fontSize: 14.0,
                               fontWeight: FontWeight.w500,

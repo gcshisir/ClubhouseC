@@ -30,7 +30,7 @@ class RoomCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '${room.club}'.toUpperCase(),
+                  '${room.club} 🏠 '.toUpperCase(),
                   style: Theme.of(context).textTheme.overline!.copyWith(
                         fontSize: 12.0,
                         fontWeight: FontWeight.w500,
