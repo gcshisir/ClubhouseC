@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import '../widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -37,14 +39,15 @@ class RoomScreen extends StatelessWidget {
         leadingWidth: 120.0,
       ),
       body: Container(
-          padding: EdgeInsets.all(20.0),
-          height: MediaQuery.of(context).size.height,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(40.0),
-          ),
-          child: CustomScrollView(slivers: [
+        padding: EdgeInsets.all(20.0),
+        height: MediaQuery.of(context).size.height,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(40.0),
+        ),
+        child: CustomScrollView(
+          slivers: [
             SliverToBoxAdapter(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,8 +79,26 @@ class RoomScreen extends StatelessWidget {
                   )
                 ],
               ),
+            ),
+            SliverPadding(
+              padding: EdgeInsets.all(20.0),
+              sliver: SliverGrid.count(
+                crossAxisCount: 3,
+                mainAxisSpacing: 20.0,
+                children: room.speakers
+                    .map((e) => RoomUserProfile(
+                          imageUrl: e.imageUrl,
+                          size: 66.0,
+                          name: e.givenName,
+                          isNew: Random().nextBool(),
+                          isMuted: Random().nextBool(),
+                        ))
+                    .toList(),
+              ),
             )
-          ])),
+          ],
+        ),
+      ),
     );
   }
 }
