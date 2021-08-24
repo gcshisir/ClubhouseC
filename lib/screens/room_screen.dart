@@ -95,7 +95,37 @@ class RoomScreen extends StatelessWidget {
                         ))
                     .toList(),
               ),
-            )
+            ),
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20.0),
+                child: Text(
+                  'Followed by speakers',
+                  style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                        color: Colors.grey[400],
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+              ),
+            ),
+            SliverPadding(
+              padding: EdgeInsets.all(20.0),
+              sliver: SliverGrid.count(
+                crossAxisCount: 4,
+                mainAxisSpacing: 20.0,
+                childAspectRatio: 0.7,
+                children: room.followedBySpeakers
+                    .map(
+                      (e) => RoomUserProfile(
+                        imageUrl: e.imageUrl,
+                        size: 66.0,
+                        name: e.givenName,
+                        isNew: Random().nextBool(),
+                      ),
+                    )
+                    .toList(),
+              ),
+            ),
           ],
         ),
       ),
