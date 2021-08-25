@@ -45,7 +45,7 @@ class RoomUserProfile extends StatelessWidget {
                     ],
                   ),
                   child: const Text(
-                    '🧨',
+                    '🎉',
                     style: TextStyle(fontSize: 20.0),
                   ),
                 ),
