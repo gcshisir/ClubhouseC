@@ -156,9 +156,30 @@ class RoomScreen extends StatelessWidget {
                     .toList(),
               ),
             ),
+            const SliverPadding(
+              padding: const EdgeInsets.only(bottom: 100.0),
+            )
           ],
         ),
       ),
+      bottomSheet: Container(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20.0,
+            vertical: 12.0,
+          ),
+          height: 110.0,
+          child: Row(
+            children: [
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 6.0),
+                decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(24.0),
+                ),
+                child: Text.rich(TextSpan(children: TextSpan(text: ':finger'),),),
+              )
+            ],
+          )),
     );
   }
 }
