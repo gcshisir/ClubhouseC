@@ -185,7 +185,7 @@ class RoomScreen extends StatelessWidget {
                     TextSpan(
                       children: [
                         TextSpan(
-                          text: '',
+                          text: '✌️ Leave quietly',
                           style: TextStyle(
                             color: Colors.red,
                             fontSize: 16.0,
